@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MCQ Question</title>
+    </head>
+    <body>
+        <form method="get" id="mcq_question" onsubmit="return get_result()">
+            <div id="questions_list"></div>
+            <input type="submit" value="Submit" name="submit"/>
+        </form>
+        <div id="result"></div>
+       
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $.ajax({
+    url:'./mcq.json',
+    type:'get',
+    dataType:'json',
+    success:function(res){
+        var html = '';
+        $.each(res.questions,function(k,val){
+            html +="<h4>"+ val.question +"</h4>";
+            $.each(val.option,function(key,v){
+                html +="<input type='radio' name='option_"+k+"' value='"+key+"'/>"+v+"<br/>"; 
+            });
+            html +="<div id='result_"+k+"'></div>";
+        })
+        $('#questions_list').html(html);
+
+    },
+    error:function(error){
+        console.log(error);
+    }
+  })
+});
+</script>
+<script>    
+       
+         function get_result(){
+            document.getElementById("result").innerHTML
+                                    = "";
+            var result = [];
+            var is_checked = false;
+           
+            $.ajax({
+                url:'./mcq.json',
+                type:'get',
+                dataType:'json',
+                success:function(res){
+                
+                    $.each(res.questions,function(k,val){
+                        var ele = document.getElementsByName('option_'+k);
+                        
+                        for(i = 0; i < ele.length; i++) {
+                            if(ele[i].checked){
+                                var selected_value = ele[i].value;
+                                if(selected_value == val.answer){
+                                    document.getElementById("result_"+k).innerHTML
+                                    = "Correct Answer is: "+selected_value;
+                                }else{
+                                    document.getElementById("result_"+k).innerHTML
+                                    = "Your Answer is Incorrect";
+                                }
+                                is_checked = true;
+                            }
+                            
+                        } 
+                    });
+
+                    if(is_checked == false){
+                            document.getElementById("result").innerHTML
+                                    = "please check option";
+                    }
+                
+                },
+                error:function(error){
+                    console.log(error);
+                }
+            });
+            return false;
+         }
+       </script>
+
+    </body>
+</html>

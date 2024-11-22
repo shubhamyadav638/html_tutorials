@@ -1,0 +1,37 @@
+{
+    "questions":[
+        {
+            "question":"What is your name",
+            "answer":"1",
+            "option":
+                {
+                    "1":"Bipin Yadav",
+                    "2":"Vipul Yadav",
+                    "3":"Shubham Yadav",
+                    "4":"Rohit Yadav"
+                }
+            
+
+        },
+        {
+            "question":"Where Do you live?",
+            "answer":"2",
+            "option":{
+                    "1":"Lahuaa",
+                    "2":"Udhara",
+                    "3":"Khaira",
+                    "4":"Rampur"
+                }
+        },
+        {
+            "question":"Where Do you live?",
+            "answer":"2",
+            "option":{
+                    "1":"Lahuaa",
+                    "2":"Udhara",
+                    "3":"Khaira",
+                    "4":"Rampur"
+                }
+        }
+    ]
+}

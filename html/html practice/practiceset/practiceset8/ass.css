@@ -1,0 +1,18 @@
+.loader {
+    width: 200px;
+    height: 200px;
+    border-radius:50%;
+    border: 20px solid black;
+    border-top: 20px solid yellow;
+    animation: spananimation 2s steps(10) 0s infinite normal;
+}
+
+@keyframes spananimation {
+    from {
+        transform:rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}

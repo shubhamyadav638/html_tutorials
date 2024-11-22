@@ -1,0 +1,26 @@
+#outer {
+    height: 800px;
+    width: 800px;
+    border: 10px groove grey;
+    background-color: aqua;
+}
+
+.row {
+    height: 100px;
+    width: 800px;
+    background-color: blue;
+}
+
+.w {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    float: left;
+}
+
+.b {
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    float: left;
+}

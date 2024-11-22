@@ -1,0 +1,33 @@
+.nav{
+    background-color:black;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+li{
+    list-style-type: none;
+   /* background-color: aqua; */
+}
+
+.outer{
+    width: 400px;
+    height: 400px;
+    background-color:rebeccapurple;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+
+}
+
+.inner{
+    width: 100px;
+    height: 100px;
+    background-color:rosybrown;
+    align-self: flex-end;
+}

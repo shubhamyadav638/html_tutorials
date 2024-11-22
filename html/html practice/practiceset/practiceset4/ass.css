@@ -1,0 +1,41 @@
+.sh {
+        width: 100px;
+        height: 100px;
+        border: 2px solid red;
+
+        display: inline-block;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    color:white;
+}
+
+#shu{
+    height: 60px;
+    background-color: #0f1111;
+}
+
+.logo{
+    font-size: 25px;
+    color: #f08804;
+}
+
+button{
+    color: #f08804;
+}
+
+a{
+    margin-right: 200px;
+    text-decoration: none;
+}
+
+footer{
+    background-color: #0f1111;
+    color:white;
+    text-align: center;
+}
+#content{
+    height: 500px;
+}
